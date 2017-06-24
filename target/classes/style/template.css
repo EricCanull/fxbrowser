@@ -1,9 +1,13 @@
 .root{
-	/*-fx-base: rgb(22.0, 33.0, 18.0); */
+	-fx-base: rgb(22.0, 33.0, 18.0);
 }
 
 .pane {
-  	-fx-background-color: rgb(35,36,38);	
+  	-fx-background-color: #353638;
+}
+
+.grid-pane {
+	-fx-background-color: transparent;
 }
 /*.web-view {
 -fx-context-menu-enabled: false; 
