@@ -38,7 +38,7 @@
                   <Button fx:id="proceedButton" mnemonicParsing="false" text="Go" HBox.hgrow="NEVER" />
                   <ComboBox fx:id="addressBox" maxWidth="1000.0" prefWidth="500.0" HBox.hgrow="ALWAYS" />
                   <TextField fx:id="searchField" prefWidth="350.0" HBox.hgrow="SOMETIMES" />
-                  <Button fx:id="searchButton" mnemonicParsing="false" text="search" HBox.hgrow="NEVER">
+                  <Button fx:id="searchButton" mnemonicParsing="false" HBox.hgrow="NEVER">
                      <HBox.margin>
                         <Insets right="5.0" />
                      </HBox.margin></Button>
