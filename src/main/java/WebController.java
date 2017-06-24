@@ -69,7 +69,7 @@ public class WebController extends BorderPane implements Initializable {
 
 
         webEngine = webView.getEngine();
-        //   webEngine.setUserStyleSheetLocation(getClass().getResource("/style/style.css").toString());
+      //  webEngine.setUserStyleSheetLocation(getClass().getResource("/style/style.css").toString());
         webEngine.load(addressBox.getValue());
         progressBar.progressProperty().bind(webEngine.getLoadWorker().progressProperty());
         webEngine.getLoadWorker().stateProperty().addListener(this::stateChangeListener);
