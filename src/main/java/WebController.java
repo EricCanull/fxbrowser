@@ -138,7 +138,7 @@ public class WebController extends BorderPane implements Initializable {
     }
 
     /**
-     * Use javaScript command to cycle backward in web history after forward button is pressed.
+     * Use javaScript command to cycle backward in web history after back button is pressed.
      * @param event
      */
     private void backButtonListener(ActionEvent event) {

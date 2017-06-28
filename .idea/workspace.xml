@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc1b084d-68f5-4aa1-b9ab-d8e9d1b7b6b9" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/style/stackoverflow.css" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/WebController.java" afterPath="$PROJECT_DIR$/src/main/java/WebController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -24,8 +22,7 @@
             <state relative-caret-position="240">
               <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
               <folding>
-                <element signature="e#638#639#0" expanded="true" />
-                <element signature="e#657#658#0" expanded="true" />
+                <element signature="imports" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -34,8 +31,8 @@
       <file leaf-file-name="WebController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/WebController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+            <state relative-caret-position="-440">
+              <caret line="139" column="7" lean-forward="true" selection-start-line="139" selection-start-column="7" selection-end-line="139" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1266#1267#0" expanded="true" />
@@ -735,12 +732,12 @@
       <workItem from="1498259070247" duration="349000" />
       <workItem from="1498271767245" duration="233000" />
       <workItem from="1498272629739" duration="9474000" />
-      <workItem from="1498617475351" duration="1976000" />
+      <workItem from="1498617475351" duration="2950000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12032000" />
+    <option name="totallyTimeSpent" value="13006000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="82" y="0" width="1838" height="1080" extended-state="6" />
@@ -828,8 +825,7 @@
         <state relative-caret-position="240">
           <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
           <folding>
-            <element signature="e#638#639#0" expanded="true" />
-            <element signature="e#657#658#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -867,8 +863,7 @@
         <state relative-caret-position="120">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
-            <element signature="e#638#639#0" expanded="true" />
-            <element signature="e#657#658#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -896,8 +891,7 @@
         <state relative-caret-position="120">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
-            <element signature="e#638#639#0" expanded="true" />
-            <element signature="e#657#658#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -955,8 +949,7 @@
         <state relative-caret-position="240">
           <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
           <folding>
-            <element signature="e#638#639#0" expanded="true" />
-            <element signature="e#657#658#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -988,8 +981,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/WebController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+        <state relative-caret-position="-440">
+          <caret line="139" column="7" lean-forward="true" selection-start-line="139" selection-start-column="7" selection-end-line="139" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1266#1267#0" expanded="true" />
