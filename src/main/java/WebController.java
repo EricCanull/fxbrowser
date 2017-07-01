@@ -47,25 +47,25 @@ public class WebController extends BorderPane implements Initializable {
      */
     private void initializeBrowser() {
         backButton.setText("\uD83E\uDC78");
-        backButton.setOnAction(this::backButtonListener);
+        backButton.setOnAction(this::backButtonAction);
 
         forwardButton.setText("\u2794");
         forwardButton.setDefaultButton(true);
-        forwardButton.setOnAction(this::forwardButtonListener);
+        forwardButton.setOnAction(this::forwardButtonAction);
 
         proceedButton.setText("Go");
-        proceedButton.setOnAction(this::proceedButtonListener);
+        proceedButton.setOnAction(this::proceedButtonAction);
 
         addressBox.setItems(FXCollections.observableArrayList());
         addressBox.setValue("http://www.google.com");
-        addressBox.setOnAction(this::proceedButtonListener);
+        addressBox.setOnAction(this::proceedButtonAction);
         addressBox.setEditable(true);
 
         searchField.setPromptText("🔍" + "Search");
 
         searchButton.setText("🔍");
         searchButton.setDefaultButton(true);
-        searchButton.setOnAction(this::searchButtonListener);
+        searchButton.setOnAction(this::searchButtonAction);
 
         webEngine = webView.getEngine();
         //webEngine.setUserStyleSheetLocation(getClass().getResource("/style/style.css").toString());
@@ -130,7 +130,7 @@ public class WebController extends BorderPane implements Initializable {
      * Use javaScript command to cycle forward in web history after forward button is pressed.
      * @param event
      */
-    public void forwardButtonListener(ActionEvent event) {
+    public void forwardButtonAction(ActionEvent event) {
         webEngine.executeScript("history.forward()");
     }
 
@@ -138,7 +138,7 @@ public class WebController extends BorderPane implements Initializable {
      * Use javaScript command to cycle backward in web history after back button is pressed.
      * @param event
      */
-    private void backButtonListener(ActionEvent event) {
+    private void backButtonAction(ActionEvent event) {
         webEngine.executeScript("history.back()");
     }
 
@@ -146,7 +146,7 @@ public class WebController extends BorderPane implements Initializable {
      * Search the web using the contents of search field and google search.
      * @param event
      */
-    private void searchButtonListener(ActionEvent event) {
+    private void searchButtonAction(ActionEvent event) {
         String google = "http://www.google.com/search?q=" + searchField.getText();
         webEngine.load(google.startsWith("http://") || google.startsWith("https://")
                 ? google : "http://" + google);
@@ -156,14 +156,14 @@ public class WebController extends BorderPane implements Initializable {
      * Request URL in the address box after the proceed button has been pressed.
      * @param event
      */
-    private void proceedButtonListener(ActionEvent event) {
+    private void proceedButtonAction(ActionEvent event) {
         String url = addressBox.valueProperty().getValue();
         webEngine.load(url.startsWith("http://") || url.startsWith("https://")
                 ? url : "http://" + url);
     }
 
     /**
-     * Sets the dark html theme on all websites.
+     * Sets dark themed html tag elements on current URL.
      * @param succeeded
      */
     private void setWebpageTheme(Boolean succeeded) {
