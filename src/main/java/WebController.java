@@ -81,8 +81,9 @@ public class WebController extends BorderPane implements Initializable {
      * Maintains web history for returning to a previous URL or vice-versa.
      * @param changeValue A website page URL
      */
-    public void historyListener(ListChangeListener.Change<? extends WebHistory.Entry> changeValue) {
+    private void historyListener(ListChangeListener.Change<? extends WebHistory.Entry> changeValue) {
         changeValue.next();
+
         // Removes url from address box
         for (WebHistory.Entry entry : changeValue.getRemoved()) {
             addressBox.getItems().remove(entry.getUrl());
@@ -90,6 +91,7 @@ public class WebController extends BorderPane implements Initializable {
 
         // Add url to address box
         for (WebHistory.Entry entry : changeValue.getAddedSubList()) {
+            addressBox.setValue(entry.getUrl());
             addressBox.getItems().add(entry.getUrl());
         }
     }
@@ -100,7 +102,7 @@ public class WebController extends BorderPane implements Initializable {
      * @param old_val
      * @param new_val
      */
-    public void progressBarListener(ObservableValue<? extends Number> ov, Number old_val, Number new_val) {
+    private void progressBarListener(ObservableValue<? extends Number> ov, Number old_val, Number new_val) {
         progressBar.setProgress(new_val.doubleValue());
     }
 
@@ -130,7 +132,7 @@ public class WebController extends BorderPane implements Initializable {
      * Use javaScript command to cycle forward in web history after forward button is pressed.
      * @param event
      */
-    public void forwardButtonAction(ActionEvent event) {
+    private void forwardButtonAction(ActionEvent event) {
         webEngine.executeScript("history.forward()");
     }
 
