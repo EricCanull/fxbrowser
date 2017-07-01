@@ -13,10 +13,7 @@ public class Main extends Application {
 
 	@Override
 	public void start(Stage stage) throws IOException {
-		Parent root = FXMLLoader.load(getClass().getResource("/fxml/FXMLWebPanel.fxml"));
-
-		Scene scene = new Scene(root);
-
+		Scene scene = new Scene(FXMLLoader.load(getClass().getResource("/fxml/FXMLWebPanel.fxml")));
 		stage.setScene(scene);
 		stage.show();
 	}
