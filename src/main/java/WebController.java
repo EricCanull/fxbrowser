@@ -78,21 +78,19 @@ public class WebController extends BorderPane implements Initializable {
     }
 
     /**
-     * Maintains web history for returning to a previous URL or vis-versa.
+     * Maintains web history for returning to a previous URL or vice-versa.
      * @param changeValue A website page URL
      */
     public void historyListener(ListChangeListener.Change<? extends WebHistory.Entry> changeValue) {
         changeValue.next();
-        // Removes url from
+        // Removes url from address box
         for (WebHistory.Entry entry : changeValue.getRemoved()) {
             addressBox.getItems().remove(entry.getUrl());
-            //System.out.print("Removed url: ");
-            //System.out.println(entry.getUrl());
         }
+
+        // Add url to address box
         for (WebHistory.Entry entry : changeValue.getAddedSubList()) {
-            //System.out.print("Added url: ");
             addressBox.getItems().add(entry.getUrl());
-            //System.out.println(entry.getUrl());
         }
     }
 
@@ -103,7 +101,6 @@ public class WebController extends BorderPane implements Initializable {
      * @param new_val
      */
     public void progressBarListener(ObservableValue<? extends Number> ov, Number old_val, Number new_val) {
-        //System.out.println(new_val.toString());
         progressBar.setProgress(new_val.doubleValue());
     }
 
