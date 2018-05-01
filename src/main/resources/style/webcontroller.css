@@ -1,6 +1,6 @@
 .root{
     -fx-base: #31363b;
-    -fx-accent: #3073b4;
+    -fx-accent: #a0c8ff;
     -fx-background: #31363b;
     -fx-focus-color: #3073b4;
     -fx-control-inner-background: #232629;
@@ -13,8 +13,15 @@
         derive(-fx-color, -5%) 60%, 
         derive(-fx-color, -8%) 100%);
 }
-.search-text-field{
-    -fx-prompt-text-fill: derive(-fx-text-base-color, -20%);
+.search-text-field {
+    -fx-prompt-text-fill: derive(-fx-text-base-color, -28%);
+    -fx-text-fill: derive(-fx-text-base-color, -20%);
+   
+}
+
+.search-text-field .text {
+    -fx-font-family: OpenSans-Regular;
+    -fx-font-size: 13px;
 }
 .hyperlink {
     -fx-fill: -fx-text-background-color;
@@ -34,20 +41,8 @@
     -fx-background-insets: -1;
 }
 
-.log-text-area .content {
-    -fx-background-color: #192022;
-}
-.spinner .text-field:readonly {
-    -fx-background-color: #192022;
-}
-
 .toggle-button:selected {
     -fx-text-fill: -fx-text-base-color;
-}
-
-.sort-label {
-    -fx-font-family: OpenSans-Regular;
-    -fx-font-size: 14px;
 }
 
 .control-label {
@@ -57,7 +52,7 @@
 
 .status-label {
     -fx-font-family: OpenSans-Regular;
-    -fx-font-size: 11px;
+    -fx-font-size: 12px;
 }
 
 .title-bar {
@@ -101,6 +96,9 @@
     -fx-fill: -fx-text-background-color;
     -fx-text-fill: -fx-text-background-color;
 }
+.tab-pane:top .tab-header-area .tab-header-background {
+    -fx-background-color: #4b5055, #31363b, #31363b;
+}
 
 .control-button {
     -fx-background-color: linear-gradient(from 48.0% 100.0% to 50.0% 43.0%, #960505 0.0%, #C21A4D 96.0%, #C21A4D 100.0%);
@@ -115,9 +113,15 @@
     -fx-text-fill: -fx-text-base-color;
 }
 
-.url-text-field {
-    -fx-text-fill: -fx-text-base-color;
-    -fx-prompt-text-fill: #BDBDBD;
+.url-address-combo .list-cell:selected:empty .text {
+     -fx-fill: derive(-fx-text-base-color, -25%);
+}
+
+.url-address-combo .list-cell:selected:empty {
+    -fx-font-family: OpenSans-Regular;
+    -fx-font-size: 12px;
+    -fx-prompt-text-fill: derive(-fx-text-base-color, -28%);
+    -fx-text-fill: derive(-fx-text-base-color, -25%);
 }
 
 .menu-button .label {
