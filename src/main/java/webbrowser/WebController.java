@@ -1,3 +1,5 @@
+package webbrowser;
+
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
@@ -46,29 +48,21 @@ public class WebController extends BorderPane implements Initializable {
      * Initialize the browser GUI and add event handlers
      */
     private void initializeBrowser() {
-        backButton.setText("\uD83E\uDC78");
         backButton.setOnAction(this::backButtonAction);
-
-        forwardButton.setText("\u2794");
-        forwardButton.setDefaultButton(true);
         forwardButton.setOnAction(this::forwardButtonAction);
 
-        proceedButton.setText("Go");
         proceedButton.setOnAction(this::proceedButtonAction);
 
         addressBox.setItems(FXCollections.observableArrayList());
-        addressBox.setValue("http://www.google.com");
+        addressBox.setValue("http://www.fxexperience.com");
         addressBox.setOnAction(this::proceedButtonAction);
         addressBox.setEditable(true);
 
-        searchField.setPromptText("🔍" + "Search");
-
-        searchButton.setText("🔍");
-        searchButton.setDefaultButton(true);
+        searchField.setPromptText("\uD83D\uDD0D" +" Search");
         searchButton.setOnAction(this::searchButtonAction);
 
         webEngine = webView.getEngine();
-        //webEngine.setUserStyleSheetLocation(getClass().getResource("/style/style.css").toString());
+        webEngine.setUserStyleSheetLocation(getClass().getResource("/style/style.css").toString());
         webEngine.load(addressBox.getValue());
         progressBar.progressProperty().bind(webEngine.getLoadWorker().progressProperty());
         webEngine.getLoadWorker().stateProperty().addListener(this::stateChangeListener);
@@ -85,15 +79,17 @@ public class WebController extends BorderPane implements Initializable {
         changeValue.next();
 
         // Removes url from address box
-        for (WebHistory.Entry entry : changeValue.getRemoved()) {
+        changeValue.getRemoved().forEach((entry) -> {
             addressBox.getItems().remove(entry.getUrl());
-        }
+        });
 
         // Add url to address box
-        for (WebHistory.Entry entry : changeValue.getAddedSubList()) {
+        changeValue.getAddedSubList().stream().map((entry) -> {
             addressBox.setValue(entry.getUrl());
+            return entry;
+        }).forEachOrdered((entry) -> {
             addressBox.getItems().add(entry.getUrl());
-        }
+        });
     }
 
     /**
@@ -113,7 +109,7 @@ public class WebController extends BorderPane implements Initializable {
      * @param newValue
      */
     private void stateChangeListener(ObservableValue<? extends Object> observable, Object oldValue, Object newValue) {
-        setWebpageTheme(false); //set website html dark theme
+        setWebpageTheme(newValue.toString().equalsIgnoreCase("SUCCEEDED")); //set website html dark theme
         String output = newValue.toString().toLowerCase();
         statusLabel.setText("Status: " + output);
     }
@@ -176,7 +172,7 @@ public class WebController extends BorderPane implements Initializable {
             Attr newAttr = null;
             for (int i = 0; i < htmlTags.getLength(); i++) {
                 newAttr = webEngine.getDocument().createAttribute("style");
-                newAttr.setValue("background-color: #222; border-color: #333; color: #bbb; ");
+                newAttr.setValue("background-color: #171a1d; border-color: #43462b; color: #bbb; ");
                 htmlTags.item(i).getAttributes().setNamedItem(newAttr);
             }
         }
