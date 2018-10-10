@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+
+<TabPane fx:id="tabPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="720.0" prefWidth="1220.0" styleClass="tab-pane-pages" stylesheets="@../style/webcontroller.css" tabMinHeight="32.0" tabMinWidth="32.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="webbrowser.MainController">
+   <tabs>
+      <Tab fx:id="rootTab" />
+      <Tab fx:id="emptyTab" />
+   </tabs>
+</TabPane>

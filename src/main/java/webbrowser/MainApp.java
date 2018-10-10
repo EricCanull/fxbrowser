@@ -9,7 +9,7 @@ import java.io.IOException;
 import javafx.scene.text.Font;
 
 public class MainApp extends Application {
-
+    
     @Override
     public void start(Stage stage) throws IOException {
         
@@ -17,13 +17,15 @@ public class MainApp extends Application {
         Font.loadFont(MainApp.class.getResource("/fonts/OpenSans-Regular.ttf").toExternalForm(), 10);
         Font.loadFont(MainApp.class.getResource("/fonts/FiraCode-Regular.ttf").toExternalForm(), 10);
         
-        Scene scene = new Scene(FXMLLoader.load(getClass().getResource("/fxml/FXMLWebController.fxml")));
+        Scene scene = new Scene(FXMLLoader.load(getClass().getResource("/fxml/FXMLMainController.fxml")));
         stage.setTitle("Fx Browser Demo");
         stage.setScene(scene);
         stage.show();
     }
 
-    /* @param args the command line arguments */
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
         launch(args);
     }

@@ -5,9 +5,6 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ProgressBar?>
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
@@ -17,88 +14,77 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.web.WebView?>
 
-
-<TabPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../style/webcontroller.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="webbrowser.WebController">
-   <tabs>
-      <Tab fx:id="initialTab" text="Untitled Tab">
-         <content>
-            <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1220.0" styleClass="pane" stylesheets="@../style/webcontroller.css">
-               <center>
-                  <GridPane prefHeight="680.0" prefWidth="1220.0" styleClass="grid-pane" vgap="5.0">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="600.0" vgrow="ALWAYS" />
-                    </rowConstraints>
-                     <children>
-                        <WebView fx:id="webView" maxHeight="20000.0" maxWidth="20000.0" minHeight="-1.0" minWidth="-1.0" prefWidth="1220.0" GridPane.columnSpan="4" />
-                     </children>
-                  </GridPane>
-               </center>
-               <bottom>
-                  <AnchorPane minWidth="-Infinity" prefHeight="26.0" BorderPane.alignment="CENTER">
-                     <children>
-                        <Label fx:id="statusLabel" styleClass="status-label" text="Status" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="7.0" />
-                        <ProgressBar fx:id="progressBar" prefWidth="200.0" progress="0.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="5.0" />
-                     </children>
-                  </AnchorPane>
-               </bottom>
-               <top>
-                  <GridPane minHeight="-Infinity" prefHeight="48.0" BorderPane.alignment="CENTER">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="45.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                     <children>
-                        <HBox alignment="CENTER" spacing="5.0" GridPane.columnSpan="2">
-                           <children>
-                              <Button fx:id="backButton" mnemonicParsing="false" prefHeight="30.0" prefWidth="42.0" HBox.hgrow="NEVER">
-                                 <HBox.margin>
-                                    <Insets left="5.0" />
-                                 </HBox.margin>
-                                 <graphic>
-                                    <FontAwesomeIconView glyphName="ARROW_LEFT" size="16" styleClass="font-awesome-icon" />
-                                 </graphic>
-                              </Button>
-                              <Button fx:id="forwardButton" mnemonicParsing="false" prefHeight="30.0" prefWidth="42.0" HBox.hgrow="NEVER">
-                                 <graphic>
-                                    <FontAwesomeIconView glyphName="ARROW_RIGHT" size="16" styleClass="font-awesome-icon" />
-                                 </graphic>
-                              </Button>
-                              <Button fx:id="proceedButton" mnemonicParsing="false" prefHeight="30.0" prefWidth="42.0" HBox.hgrow="NEVER">
-                                 <graphic>
-                                    <FontAwesomeIconView glyphName="REPEAT" size="16" styleClass="font-awesome-icon" />
-                                 </graphic>
-                              </Button>
-                              <ComboBox fx:id="addressBox" editable="true" maxWidth="1000.0" prefHeight="32.0" prefWidth="500.0" styleClass="url-address-combo" HBox.hgrow="ALWAYS" />
-                              <TextField fx:id="searchField" prefHeight="32.0" prefWidth="350.0" styleClass="search-text-field" HBox.hgrow="SOMETIMES" />
-                              <Button fx:id="searchButton" mnemonicParsing="false" prefHeight="30.0" prefWidth="42.0" HBox.hgrow="NEVER">
-                                 <HBox.margin>
-                                    <Insets right="5.0" />
-                                 </HBox.margin>
-                                 <graphic>
-                                    <FontAwesomeIconView glyphName="SEARCH" size="16" styleClass="font-awesome-icon" />
-                                 </graphic>
-                              </Button>
-                           </children>
-                        </HBox>
-                     </children>
-                  </GridPane>
-               </top>
-            </BorderPane>
-         </content>
-      </Tab>
-      <Tab fx:id="emptyTab">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-        </content>
-      </Tab>
-   </tabs>
-</TabPane>
+<fx:root maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="200.0" prefHeight="720.0" prefWidth="1220.0" styleClass="pane" stylesheets="@../style/webcontroller.css" type="BorderPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <GridPane prefHeight="680.0" prefWidth="1220.0" styleClass="grid-pane" vgap="5.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="600.0" vgrow="ALWAYS" />
+        </rowConstraints>
+         <children>
+            <WebView fx:id="webView" minHeight="10.0" minWidth="10.0" prefHeight="-1.0" prefWidth="-1.0" GridPane.columnSpan="4" />
+         </children>
+      </GridPane>
+   </center>
+   <bottom>
+      <AnchorPane minWidth="-Infinity" prefHeight="26.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox layoutX="5.0" layoutY="7.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1183.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label fx:id="statusLabel" styleClass="status-label" text="Status" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <top>
+      <GridPane minHeight="-Infinity" prefHeight="48.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="45.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <HBox alignment="CENTER" spacing="5.0" GridPane.columnSpan="2">
+               <children>
+                  <Button fx:id="backButton" mnemonicParsing="false" prefHeight="30.0" prefWidth="42.0" HBox.hgrow="NEVER">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="ARROW_LEFT" size="16" styleClass="font-awesome-icon" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="forwardButton" mnemonicParsing="false" prefHeight="30.0" prefWidth="42.0" HBox.hgrow="NEVER">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="ARROW_RIGHT" size="16" styleClass="font-awesome-icon" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="proceedButton" mnemonicParsing="false" prefHeight="30.0" prefWidth="42.0" HBox.hgrow="NEVER">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="REPEAT" size="16" styleClass="font-awesome-icon" />
+                     </graphic>
+                  </Button>
+                  <ComboBox fx:id="addressBox" editable="true" maxWidth="1000.0" prefHeight="32.0" prefWidth="500.0" styleClass="url-address-combo" HBox.hgrow="ALWAYS" />
+                  <TextField fx:id="searchField" prefHeight="32.0" prefWidth="350.0" styleClass="search-text-field" HBox.hgrow="SOMETIMES" />
+                  <Button fx:id="menuButton" mnemonicParsing="false" onAction="#enableFirebug" prefHeight="30.0" prefWidth="42.0" HBox.hgrow="NEVER">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="BARS" size="16" styleClass="font-awesome-icon" />
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
+   </top>
+</fx:root>

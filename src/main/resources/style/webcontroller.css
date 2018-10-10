@@ -16,33 +16,23 @@
 .search-text-field {
     -fx-prompt-text-fill: derive(-fx-text-base-color, -28%);
     -fx-text-fill: derive(-fx-text-base-color, -20%);
-   
 }
-
+.tab-pane-pages:top .tab-header-area .headers-region .tab:selected:top {
+    -fx-tab-min-width: 180px;
+    -fx-pref-width: 180px;
+    
+}
 .search-text-field .text {
     -fx-font-family: OpenSans-Regular;
     -fx-font-size: 13px;
 }
+
 .hyperlink {
     -fx-fill: -fx-text-background-color;
-}
-.status-label {
-    -fx-font-family: OpenSans-Regular;
-    -fx-font-size: 11px;
 }
 
 .font-awesome-icon {
     -fx-fill: derive(-fx-text-base-color, -20%);
-}
-.log-text-area {
-    -fx-font-family: FiraCode-Regular;
-    -fx-font-size: 13px;
-    -fx-text-fill: #BDBDBD;
-    -fx-background-insets: -1;
-}
-
-.toggle-button:selected {
-    -fx-text-fill: -fx-text-base-color;
 }
 
 .control-label {
@@ -53,28 +43,6 @@
 .status-label {
     -fx-font-family: OpenSans-Regular;
     -fx-font-size: 12px;
-}
-
-.title-bar {
-    -fx-border-width: 0 0 2 0;
-    -fx-background-color: #2d3136;
-    -fx-border-color: #686971;
-}
-.rect {
-    -fx-background-color: #3073b4;
-    -fx-border-radius: 3 3 1 1;
-    -fx-background-radius: 3 3 1 1;
-}
-
-.controls-grid-pane {
-    -fx-background-color: #31363b;
-    -fx-padding: 6px;
-    -fx-background-radius: 3, 3, 2, 1;
-}
-
-.number-field {
-    -fx-border-color: #3073b4; 
-    -fx-background-color: #3073b433;
 }
 
 .split-pane {
@@ -98,10 +66,6 @@
 }
 .tab-pane:top .tab-header-area .tab-header-background {
     -fx-background-color: #4b5055, #31363b, #31363b;
-}
-
-.control-button {
-    -fx-background-color: linear-gradient(from 48.0% 100.0% to 50.0% 43.0%, #960505 0.0%, #C21A4D 96.0%, #C21A4D 100.0%);
 }
 
 .button, .toggle-button, .check-box .box, .radio-button .radio, .choice-box, .menu-button, .tab, .combo-box-base {
